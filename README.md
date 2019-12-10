@@ -41,6 +41,8 @@ We need to turn some stats into percentages not absolute numbers by dividing by 
 
 Otherwise any normalization applied across the whole data set won't account for differences in population between elections
 
+## Related Work
+
 ## Modeling the Data
 
 ### Exploratory Baseline Model
