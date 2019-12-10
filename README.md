@@ -1,8 +1,12 @@
-## Welcome to GitHub Pages
+## Predicting Midterm Elections
 
-You can use the [editor on GitHub](https://github.com/ChrisLewis0/ChrisLewis0.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Exploratory Data Analysis
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- What data are we dealing with?
+- How have we explored the data (initial explorations, data cleaning and reconciliation, etc)? 
+- Visualizations and captions that summarize the noteworthy findings of the EDA.
+- A revised project question based on the insights you gained through EDA (specific to data).
+- A baseline model.
 
 ### Markdown
 
