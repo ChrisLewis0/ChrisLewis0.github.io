@@ -23,7 +23,7 @@ this analysis, but the suggested feature set should include past elections, poll
 
 **Are there differences in House seats lost by Democratic vs Republican Presidents?**
 
-![](Distributions of Change in House Seats.png)
+![](/Distributions of Change in House Seats.png)
 
 ### Data Cleaning and Merging
 
