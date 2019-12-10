@@ -8,34 +8,57 @@
 - A revised project question based on the insights you gained through EDA (specific to data).
 - A baseline model.
 
+### Project Goal 
+The primary goal of this project is to explain the outcomes of the 2018 midterm
+elections in the House. Any piece of information from before election day can be used to perform
+this analysis, but the suggested feature set should include past elections, polling data, and demographic information of congressional districts
+
+### House District Candidate Data
+
 ### Markdown
 
+### How do states traditionally vote?
+
+### House Seat Changes by President
+
+### Data Cleaning and Merging
+
+**Trim our features into something useable for an exploratory regression**
+We see that candidates outside the major two parties basically never win - so let's only look at the main two parties.
+
+We also need to merge rows for tickets that were competing in the same election (where district and year are equal), as our predictive task will be predicting the winner.
+
+We assign boolean values for party - democrat = 0, republican = 1. Our winner variable is changed here from representing success to representing the party that won, once we merge the tickets.
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+We need to turn some stats into percentages not absolute numbers by dividing by total population.
 
-# Header 1
-## Header 2
-### Header 3
+Otherwise any normalization applied across the whole data set won't account for differences in population between elections
 
-- Bulleted
-- List
+## Modeling the Data
 
-1. Numbered
-2. List
+### Exploratory Baseline Model
 
-**Bold** and _Italic_ and `Code` text
+**We produce a simple exploratory linear regression to get a feel for what predictors might be important**
 
-[Link](url) and ![Image](src)
-```
+After producing this exploratory regression, we bootstrap to build up a map of p values for our predictors to get a sense of which predictors will be the most important for us.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+We can see that many of our predictors are not very significant. To look into this further, we bootstrap across many samples of the data to produce a more accurate picture of which predictors are significant in our linear regression.
 
-### Jekyll Themes
+### Lasso Model
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ChrisLewis0/ChrisLewis0.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+We use a Lasso linear regression to try perform some variable selection on the data.
 
-### Support or Contact
+### Ridge Model
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+We use a Ridge linear regression model.
+
+### Random Forests 
+
+### Boosting
+
+### Neural Networks
+
+## Interpretation
+
+## Conclusion
