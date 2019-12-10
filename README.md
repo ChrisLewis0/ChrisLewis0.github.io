@@ -19,6 +19,8 @@ this analysis, but the suggested feature set should include past elections, poll
 
 ### How do states traditionally vote?
 
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/Party%20Voting%20Averages%20by%20State.png)
+
 ### House Seat Changes by President
 
 **Are there differences in House seats lost by Democratic vs Republican Presidents?**
