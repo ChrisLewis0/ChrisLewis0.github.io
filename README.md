@@ -100,6 +100,8 @@ The graph below also shows classification accuracy by iteration, but includes th
 
 ### Neural Networks
 
+Our final model that we tested was a Neural Network. We believed that it would be able to properly model such a complex problem; however, it would have the drawback of losing interpretability from the decision tree ensemble methods. When testing the neural network we tried many different configurations of number of layers, size of hidden layers, regularization, and activation functions. The best configuration that we ended with was 3 hidden layers, each with 100 nodes, and using a ReLu activation function with L1 regularization. When training the net we had a 30% validation split with 2000 epochs and used batches in size of 64. The graph illustrates the accuracy over the training and the final accuracy on the net was right around the ensemble methods. We believe with more data it could keep increasing; however, we decided not to use data augmentation due to the variability in voters and not wanting to create bad data.
+
 ## Interpretation
 
 From our modeling analysis we have determined that the most effective models in predicting the results of the 2018 midterm elections were the boosting model and the artificial neural network, whose classification accuracy around 85% was dramatically better than the 33% accuracy achieved by the linear predictions. In terms of best predictors, we found that the ethnicity variables were highly effective predictors, while sex and age variables could also be significantly effective predictors. 
