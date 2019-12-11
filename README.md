@@ -11,11 +11,11 @@
 ### Project Goal 
 The primary goal of this project is to explain the outcomes of the 2018 midterm
 elections in the House. Any piece of information from before election day can be used to perform
-this analysis, but the suggested feature set should include past elections, polling data, and demographic information of congressional districts
+this analysis, but the suggested feature set should include past elections, polling data, and demographic information of congressional districts.
 
 ### House District Candidate Data
 
-### Markdown
+We sourced raw candidate data detailing the total votes for each candidate in each district in the country going back to 1976. This data also included the party affiliation of each candidate which allowed us to obtain the total votes for each party by district for the last 40 years. We then cleaned the data extensively so that it would be in a useable form to analyze. 
 
 ### How do states traditionally vote?
 
@@ -30,41 +30,42 @@ this analysis, but the suggested feature set should include past elections, poll
 ### Data Cleaning and Merging
 
 **Trim our features into something useable for an exploratory regression**
-We see that candidates outside the major two parties basically never win - so let's only look at the main two parties.
 
-We also need to merge rows for tickets that were competing in the same election (where district and year are equal), as our predictive task will be predicting the winner.
+We noticed that candidates outside the major two parties basically never win, so we decided to focus our attention on the two major parties: Democrats and Republicans.
 
-We assign boolean values for party - democrat = 0, republican = 1. Our winner variable is changed here from representing success to representing the party that won, once we merge the tickets.
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We also need to merge rows for tickets that were competing in the same election, where district and year are equal, as our predictive task will be predicting the winner.
 
-We need to turn some stats into percentages not absolute numbers by dividing by total population.
+We then assinged boolean values for party, 0 for Democrats and 1 for Republicans. We changed our winner variable here from representing success to representing the party that won, once we merge the tickets, making the data cleaner and easier to use. 
 
-Otherwise any normalization applied across the whole data set won't account for differences in population between elections
+We needed to transition some of the demographic variables such as sex and ethnicity into percentages instead of absolute numbers. We did this by dividing the absolute values by the total population values. Otherwise any normalization applied across the whole data set won't account for differences in population between elections. 
 
 ## Related Work
 
 ## Modeling the Data
 
-### Exploratory Baseline Model
+### Exploratory Baseline Models
 
-**We produce a simple exploratory linear regression to get a feel for what predictors might be important**
+**Linear Model**
 
-After producing this exploratory regression, we bootstrap to build up a map of p values for our predictors to get a sense of which predictors will be the most important for us.
+We produced a simple exploratory linear regression to get a feel for what predictors would provide the most influence on the results, and thus would be the most useful predictors. After producing this exploratory regression, we employed bootstrapping to determine p values for each of our predictors. This allowed us to determine quantitatively which predictors were statistically significant in a linear regression, which allowed us to get a sense of which predictors will be the most important for us as we moved towards more advanced models.
 
-We can see that many of our predictors are not very significant. To look into this further, we bootstrap across many samples of the data to produce a more accurate picture of which predictors are significant in our linear regression.
+We were able to determine that many of our predictors were not statistically significant. To look into this further, we bootstrap across many samples of the data to produce a more accurate picture of which predictors are significant in our linear regression.
 
-### Lasso Model
+**Ridge Model**
 
-We use a Lasso linear regression to try perform some variable selection on the data.
+We use a Ridge linear regression model to further get a sense of which predictors were influential in a regression. Ridge regression provides protections against overfitting to the train data by penalizing excessively large coefficients. This increases the predictive accuracy on the test data, and provides coefficients that we can use to more accurately predict the importance of each predictor. 
 
-### Ridge Model
+**Lasso Model**
 
-We use a Ridge linear regression model.
+We use a Lasso linear regression to try perform some variable selection on the data. Lasso regression is notorious for its tendency to prefer the removal of insignificant predictors. Thus, by using Lasso regression, we can get an even better sense of which predictors are effectively irrelevant. We discarded those predictors and focused on the remaining ones. 
 
 ### Random Forests 
 
+
+
 ### Boosting
 
+Continuing with our more advanced modeling, we 
 
 ![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/BoostingScoresByIteration.png)
 
