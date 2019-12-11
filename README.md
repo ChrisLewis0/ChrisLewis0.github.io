@@ -65,6 +65,9 @@ We use a Ridge linear regression model.
 
 ### Boosting
 
+
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/BoostingScoresByIteration.png)
+
 ### Neural Networks
 
 ## Interpretation
