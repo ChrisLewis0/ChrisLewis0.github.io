@@ -1,5 +1,9 @@
 ## Predicting Midterm Elections
 
+## Team Members: Group 11
+
+Justin Bassey, Jake Boll, Chris Lewis, Seb Shwartz
+
 ## Exploratory Data Analysis
 
 - What data are we dealing with?
@@ -8,10 +12,16 @@
 - A revised project question based on the insights you gained through EDA (specific to data).
 - A baseline model.
 
-### Project Goal 
+### Problem Statement and Motivation
+
 The primary goal of this project is to explain the outcomes of the 2018 midterm
 elections in the House. Any piece of information from before election day can be used to perform
 this analysis, but the suggested feature set should include past elections, polling data, and demographic information of congressional districts.
+
+## Introduction and Description of Data
+
+By creating an accurate model to predict house elections, this can be very beneficial to politicians. By understanding the outlook of their party, politicans can strategically manuever their resources to better their chances. While creating these models can be very benefial, it still comes with challenges such as changing economic and social issues, unpredictability of young voters, and flexibility of the model. By using exploritory data analysis we aim to overcome these challenges and make accurate predictions.
+
 
 ### House District Candidate Data
 
