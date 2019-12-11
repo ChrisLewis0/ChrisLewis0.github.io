@@ -19,7 +19,7 @@ We sourced raw candidate data detailing the total votes for each candidate in ea
 
 ### How do states traditionally vote?
 
-![Party Voting Averages Image](ChrisLewis0.github.io/Party Voting Averages by State.png)
+![Party Voting Averages Image](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/Distributions%20of%20Change%20in%20House%20Seats.png)
 
 ### House Seat Changes by President
 
