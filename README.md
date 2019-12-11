@@ -1,4 +1,4 @@
-## Predicting Midterm Elections
+## Predicting Midterm Electionz
 
 ## Exploratory Data Analysis
 
