@@ -61,13 +61,14 @@ We use a Lasso linear regression to try perform some variable selection on the d
 
 ### Random Forests 
 
-
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/rf_top_preds.png)
 
 ### Boosting
 
 Continuing with our more advanced modeling, we 
 
-![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/BoostingScoresByIteration.png)
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/boost_test_150.png)
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/boost_both_150.png)
 
 ### Neural Networks
 
