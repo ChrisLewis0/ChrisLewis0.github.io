@@ -47,6 +47,10 @@ We needed to transition some of the demographic variables such as sex and ethnic
 
 ## Related Work
 
+**Data Collection**
+
+We got our congressional district demographic data from American Community Surveys (ACS) on Census.gov, dating back to 2010. We then merged this demographics data with the House election results from Harvard's Dataverse, as well as the data we scrapped from the American Presidency Project about seats lost and gained during each sitting president's midterm. 
+
 ## Modeling the Data
 
 ### Exploratory Baseline Models
