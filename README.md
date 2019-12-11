@@ -61,11 +61,11 @@ We use a Lasso linear regression to try perform some variable selection on the d
 
 ### Random Forests 
 
-After creating basic models to get a general sense of the significance and direction of the predictors, we created more nuanced models to better predict the 2018 midterm results. The first of these models is a Random Forest Classifier. In order to better tune our Random Forest to the data, we tuned the paramaters that control the number of trees in the model and the max depth of those trees, until we arived at the model that recorded the best accuracy on the test data. We found that aproximately 65 trees of depth 10 generated the most reliable model, which had 82.0% accuracy. 
+After creating basic models to get a general sense of the significance and direction of the predictors, we created more nuanced models to better predict the 2018 midterm results. The first of these models is a Random Forest Classifier. In order to better tune our Random Forest to the data, we tuned the parameters that control the number of trees in the model and the max depth of those trees, until we arrived at the model that recorded the best accuracy on the test data. We found that approximately 65 trees of depth 10 generated the most reliable model, which had 82.0% accuracy. 
 
-The bar graph below shows how frequently each of the predictors was used as the most important split for a given tree. 
+The bar graph below shows how frequently each of the predictors was used as the most important split for a given tree. We can see that Total population, president_party and seats to defend are never the most important split as those numbers would be the same across all districts for a given year.
 
-![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/rf_top_preds.png)
+![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/rf_top_preds2.png)
 
 ### Boosting
 
@@ -81,4 +81,9 @@ The graph below also shows classification accuracy by iteration, but includes th
 
 ## Interpretation
 
+From our modeling analysis we have determined that the most effective models in predicting the results of the 2018 midterm elections were the boosting model and the artificial neural network. In terms of best predictors, we found that the ethnicity variables were highly effective predictors, while sex and age variables could also be significantly effective predictors. 
+
 ## Conclusion
+
+From our analysis, we learned the importance of diligence when sourcing and cleaning data, how isolating the important features and data points dramatically increases the performance of any model using that data. We used multiple types of models and long lists of predictors to determine the most effective of each. We were able to tune our best models to correctly predict the winner in aproximately 85% of districts nationally in the 2018 midterm elections. Although, even the 85% accuracy we were able to obtain leaves significant room for future improvement and highlights the challange of predicting elections. 
+
