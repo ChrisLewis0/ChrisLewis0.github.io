@@ -65,17 +65,18 @@ After creating basic models to get a general sense of the significance and direc
 
 The bar graph below shows how frequently each of the predictors was used as the most important split for a given tree. We can see that Total population, president_party and seats to defend are never the most important split as those numbers would be the same across all districts for a given year.
 
-![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/rf_top_preds2.png)
+![](ChrisLewis0.github.io/rf_top_preds2.png)
+
 
 ### Boosting
 
 Continuing with our more advanced modeling, we created a boosting model through Ada Boost Classifier. The boosting model we employ generates successive Decision Tree Classifiers that outweigh the data points that the previous model struggled with. Thus through multiple iterations we can develop a model that performs better on the challenging data points and thus performs better overall. In order to tune our boosting model, we toggled the base depth of the underlying Decision Tree Classifiers as well as the learning rate which controls the degree to which a model will outweigh the challenging data points from the previous model. The graph below shows the accuracy of our best tuned boosting model on the 2018 midterm test data. As you can see in the graph, the model improves significantly in accuracy during the initial iterations, reaches peak accuracy, and then begins to excessively focus on the challenging data and lose accuracy. We reached our maximum classification accuracy of about 84.5% around approximately 60 iterations of boosting. 
 
-![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/boost_test_150.png)
+![](ChrisLewis0.github.io/boost_test_150.png)
 
 The graph below also shows classification accuracy by iteration, but includes the accuracy on the train data to demonstrate how the possible dangers of overfitting increase significantly with increased iterations. 
 
-![](https://github.com/ChrisLewis0/ChrisLewis0.github.io/blob/master/boost_both_150.png)
+![](ChrisLewis0.github.io/boost_both_150.png)
 
 ### Neural Networks
 
